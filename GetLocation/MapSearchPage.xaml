@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GetLocation.MapSearchPage"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             Title="MapSearchPage">
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="1*, 5*">
+            <maps:Map x:Name="map" Grid.Row="1" Grid.RowSpan="2" />
+            <Frame BackgroundColor="AliceBlue" CornerRadius="0">
+                <VerticalStackLayout Spacing="5">
+                    <Entry Placeholder="Search on maps" x:Name="query" />
+                    <Button Text="Search" Clicked="HandleSearch" />
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
